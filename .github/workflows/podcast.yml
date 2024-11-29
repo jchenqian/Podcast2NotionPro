@@ -3,7 +3,8 @@ name: podcast sync
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 */1 * * *"
+    # - cron: "0 16 * * *"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
